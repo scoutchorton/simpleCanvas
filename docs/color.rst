@@ -8,8 +8,8 @@ Methods
 
 ``noStroke()``
 ##############
- Sets alpha of stroke to 00.
+ Disables stroke until ``stroke()`` is called.
 
 ``noFill()``
 ############
- Sets alpha of fill to 00.
+ Disables fill until ``fill()`` is called.
