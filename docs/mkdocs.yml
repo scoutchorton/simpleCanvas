@@ -1,5 +1,0 @@
-site_name: simpleCanvas
-repo_url: https://github.com/scoutchorton/simpleCanvas
-nav:
-    - Home: index.md
-theme: readthedocs
