@@ -15,4 +15,4 @@ Credits
   
   index
   shapes
-  colors
+  color
