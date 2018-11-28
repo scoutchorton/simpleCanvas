@@ -3,14 +3,6 @@
 Methods
 =======
 
-``noStroke()``
-##############
- Sets alpha of stroke to 00.
-
-``noFill()``
-############
- Sets alpha of fill to 00.
-
 ``rect(x, y, w, h)``
 ####################
  Draws a rectangle from (x,y) to (x+w,y+h)
