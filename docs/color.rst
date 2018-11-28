@@ -1,4 +1,5 @@
 .. image:: ./images/fullLogo.svg
+.. highlight:: js
 
 Color
 ======
@@ -6,10 +7,10 @@ Color
 Methods
 -------
 
-``noStroke()``
+``noStroke();``
 ##############
  Disables stroke until ``stroke()`` is called.
 
-``noFill()``
+``noFill();``
 ############
  Disables fill until ``fill()`` is called.
