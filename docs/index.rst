@@ -12,7 +12,7 @@ Credits
 
 .. toctree::
   :maxdepth: 3
+  :hidden:
   
-  index
   shapes
   color
