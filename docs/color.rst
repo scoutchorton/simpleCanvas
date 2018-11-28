@@ -1,6 +1,6 @@
 .. image:: ./images/fullLogo.svg
 
-Shapes
+Color
 ======
 
 Methods
