@@ -1,4 +1,4 @@
-.. image:: /images/fullLogo.svg
+.. image:: ../images/fullLogo.svg
 
 Welcome
 =============
