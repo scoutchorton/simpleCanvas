@@ -9,3 +9,10 @@ Credits
 -------
 
 **Author:** scoutchorton
+
+.. toctree::
+  :maxdepth: 2
+  
+  index
+  shapes
+  colors
