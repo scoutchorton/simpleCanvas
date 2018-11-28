@@ -1,7 +1,10 @@
 .. image:: ./images/fullLogo.svg
 
+Shapes
+======
+
 Methods
-=======
+-------
 
 ``noStroke()``
 ##############
