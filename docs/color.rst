@@ -9,8 +9,8 @@ Methods
 
 ``noStroke();``
 ##############
- Disables stroke until ``stroke()`` is called.
+ Disables stroke until ``stroke();`` is called.
 
 ``noFill();``
 ############
- Disables fill until ``fill()`` is called.
+ Disables fill until ``fill();`` is called.
