@@ -1,4 +1,5 @@
 .. image:: ./images/fullLogo.svg
+.. highlight:: js
 
 Shapes
 ======
@@ -6,7 +7,7 @@ Shapes
 Methods
 -------
 
-``rect(x, y, w, h)``
+``rect(x, y, w, h);``
 ####################
  Draws a rectangle from (x,y) to (x+w,y+h)
 
