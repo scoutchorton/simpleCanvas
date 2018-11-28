@@ -1,6 +1,6 @@
 .. image:: ./images/fullLogo.svg
 
-Documentation
+Welcome
 =============
 
 This is the offical documentation of simpleCanvas
