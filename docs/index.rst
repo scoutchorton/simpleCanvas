@@ -9,14 +9,11 @@ Credits
 -------
 
 **Author:** scoutchorton
-.. toctree::
-  :maxdepth: 1
-  :hidden:
-  
-  index
+
 .. toctree::
   :maxdepth: 3
   :hidden:
-  
+
+  Welcome <self>
   shapes
   color
