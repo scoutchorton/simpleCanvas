@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="135.32602"
-   height="46.712242"
-   viewBox="0 0 35.805007 12.359281"
+   width="136.69301"
+   height="51.334637"
+   viewBox="0 0 36.16669 13.58229"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.1 r15371"
    sodipodi:docname="shortLogo.svg"
-   inkscape:export-filename="C:\Users\Caleb\Pictures\simpleCanvas\shortLogo.png"
+   inkscape:export-filename="/home/scoutchorton/Desktop/Programming/Web/simpleCanvas/docs/images/shortLogo.png"
    inkscape:export-xdpi="960"
    inkscape:export-ydpi="960">
   <defs
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="80.536516"
-     inkscape:cy="22.805732"
+     inkscape:cx="-31.963484"
+     inkscape:cy="23.098717"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -42,9 +42,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1366"
-     inkscape:window-height="745"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="742"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -54,7 +54,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -62,7 +62,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(2.2351742e-8,-281.09225)">
+     transform="translate(0,-279.94676)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot10"
@@ -79,17 +79,17 @@
          id="flowPara16" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.63888931px;line-height:1.25;font-family:Rockwell;-inkscape-font-specification:Rockwell;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="-0.72347009"
+       x="-0.70624459"
        y="293.26205"
        id="text20"><tspan
          sodipodi:role="line"
          id="tspan18"
-         x="-0.72347009"
+         x="-0.70624459"
          y="293.26205"
-         style="font-size:17.63888931px;stroke-width:0.26458332">sC</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.63888931px;font-family:Arvo;-inkscape-font-specification:Arvo;stroke-width:0.26458332">sC</tspan></text>
     <path
        style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.06459515"
-       d="m 22.575837,285.93148 c 0,0 2.88623,-1.52317 4.40972,-1.3317 1.70379,0.21413 2.70593,2.44916 4.40972,2.6633 1.52348,0.19149 4.40973,-1.3316 4.40973,-1.3316 v 2.68093 c 0,0 -2.88625,1.52309 -4.40973,1.3316 -1.70379,-0.21414 -2.70593,-2.44916 -4.40972,-2.66329 -1.52349,-0.19147 -4.40972,1.33169 -4.40972,1.33169 z"
+       d="m 22.937522,285.93148 c 0,0 2.88623,-1.52317 4.40972,-1.3317 1.70379,0.21413 2.70593,2.44916 4.40972,2.6633 1.52348,0.19149 4.40973,-1.3316 4.40973,-1.3316 v 2.68093 c 0,0 -2.88625,1.52309 -4.40973,1.3316 -1.70379,-0.21414 -2.70593,-2.44916 -4.40972,-2.66329 -1.52349,-0.19147 -4.40972,1.33169 -4.40972,1.33169 z"
        id="rect22"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="caaccaacc" />

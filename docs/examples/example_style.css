@@ -1,0 +1,59 @@
+/*
+	GENERAL STYLES
+*/
+body{
+	margin:10px;
+	font-family: 'Ubuntu', sans-serif;
+}
+img{
+	margin:5px;
+}
+.code{
+    background: #f4f4f4;
+    color: #666666;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+	margin: 5px;
+    padding: 5px;
+	display: inline-block;
+	width: auto;
+	white-space: pre;
+	tab-size: 4;
+}
+
+/*
+	MAIN PAGE STYLES
+*/
+a .code{
+	color: -webkit-link;
+	text-decoration: underline;
+}
+.linkCode {
+	display: block;
+}
+
+/*
+	EXAMPLE PAGE STYLES
+*/
+#c{
+	border:1px black solid;
+	display:block;
+}
+canvas{
+	border: 1px black solid;
+}
+table{
+	table-layout: fixed;
+}
+td h3{
+	margin:0;
+}
+td .code{
+	display: block;
+    max-width: calc(100% - 20px);
+	overflow-x: scroll;
+}
+td{
+	vertical-align: top;
+}

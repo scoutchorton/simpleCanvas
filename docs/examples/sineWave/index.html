@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://scoutchorton.github.io/styles.css" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
+		<link rel="icon" href="../../images/iconLogo.png" type="image/png">
+
+		<title>simpleCanvas Demo</title>
+		<link href="../example_style.css" rel="stylesheet" type="text/css" />
+        <script src="https://scoutchorton.github.io/simpleCanvas/simpleCanvas.min.js"></script>
+
+		<script>
+		function fadingin(){
+			var element = document.getElementById("navt");
+			fade(element);
+		}
+		</script>
+	</head>
+	<body>
+		<!--<iframe id="menuFrame" src="https://scoutchorton.github.io/nav.html"></iframe>-->
+		  <center>
+			<div class="page">
+				<!--PAGE CODE START-->
+    <script>
+		var wosC=function(){
+			let canvas = document.getElementById('canvas1');
+			let c = canvas.getContext('2d');
+
+			canvas.width = canvas.height = 400;
+
+			n = 0;
+			c.lineWidth = 2;
+			setInterval(function() {
+				c.strokeStyle="#000000";
+				c.fillStyle="#ffffff";
+				c.fillRect(0, 0, canvas.width, canvas.height);
+				c.strokeStyle="#00000000";
+				c.fillStyle="#000000ff";
+
+				n--;
+
+				let a = [];
+				for(var i = 0; i < canvas.width; i++) {
+					a.push(i);
+				}
+				a.forEach(function(e) {
+					c.beginPath();
+					c.moveTo(e + c.lineWidth / 2, 200 + (100 * Math.sin((e + n) * Math.PI / 180)));
+					c.ellipse(e, 200 + (100 * Math.sin((e + n) * Math.PI / 180)), c.lineWidth / 2, c.lineWidth / 2, 0, 0, Math.PI * 2);
+					c.moveTo(e + c.lineWidth / 2, 200 + (100 * Math.sin((e - n) * Math.PI / 180)));
+					c.ellipse(e, 200 + (100 * Math.sin((e - n) * Math.PI / 180)), c.lineWidth / 2, c.lineWidth / 2, 0, 0, Math.PI * 2);
+					c.fill();
+				});
+			}, 1000/30);
+		}
+		var wsC=function(){
+			let c = new simpleCanvas('canvas2');
+
+			n=0;n = 0;
+			c.c.lineWidth = 2;
+			c.draw = function() {
+				c.background(255, 255, 255);
+				n--;
+				range(c.width).forEach(function(e){
+					c.point(e, 200+(100*Math.sin((e+n)*Math.PI/180)));
+					c.point(e, 200+(100*Math.sin((e-n)*Math.PI/180)));
+				});
+			};
+		};
+		window.onload=function(){
+			wosC();
+			wsC();
+		}
+	</script>
+		<img src="../../images/fullLogo.png" height="50px"/>
+		<a class="linkCode" href="../"><div class='code'>← Back to list</div></a>
+		<table width="100%">
+			<tr>
+				<td><h3>Without simpleCanvas</h3></td>
+				<td><h3>With simpleCanvas</h3></td>
+			</tr>
+			<tr>
+				<td><canvas id="canvas1"></canvas></td>
+				<td><canvas id="canvas2"></canvas></td>
+			</tr>
+			<tr>
+				<td><div class="code">window.onload=function(){
+	let canvas = document.getElementById('canvas1');
+	let c = canvas.getContext('2d');
+
+	canvas.width = canvas.height = 400;
+
+	n = 0;
+	c.lineWidth = 2;
+	setInterval(function() {
+		c.strokeStyle="#000000";
+		c.fillStyle="#ffffff";
+		c.fillRect(0, 0, canvas.width, canvas.height);
+		c.strokeStyle="#00000000";
+		c.fillStyle="#000000ff";
+
+		n--;
+
+		let a = [];
+		for(var i = 0; i < canvas.width; i++) {
+			a.push(i);
+		}
+		a.forEach(function(e) {
+			c.beginPath();
+			c.moveTo(e + c.lineWidth / 2, 200 + (100 * Math.sin((e + n) * Math.PI / 180)));
+			c.ellipse(e, 200 + (100 * Math.sin((e + n) * Math.PI / 180)), c.lineWidth / 2, c.lineWidth / 2, 0, 0, Math.PI * 2);
+			c.moveTo(e + c.lineWidth / 2, 200 + (100 * Math.sin((e - n) * Math.PI / 180)));
+			c.ellipse(e, 200 + (100 * Math.sin((e - n) * Math.PI / 180)), c.lineWidth / 2, c.lineWidth / 2, 0, 0, Math.PI * 2);
+			c.fill();
+		});
+	}, 1000/30);
+}</div></td>
+				<td><div class="code">window.onload=function(){
+	let c = new simpleCanvas('canvas2');
+
+	n = 0;
+	c.c.lineWidth = 2;
+	c.draw = function() {
+		c.background(255, 255, 255);
+		n--;
+		range(c.width).forEach(function(e) {
+			c.point(e, 200 + (100 * Math.sin((e + n) * Math.PI / 180)));
+			c.point(e, 200 + (100 * Math.sin((e - n) * Math.PI / 180)));
+		});
+	};
+}</div></td>
+			</tr>
+		</table>
+				<!--PAGE CODE END-->
+			</div>
+		  </center>
+		<div id="footer">
+			<span style="text-align: left;">Powered by github. Go make an account for free at <a href="https://github.com/">github.com</a>. Realy, go do it.</span>
+			<br>
+			<table width="100%">
+				<tr>
+					<td style="text-align: left;" width="33%"></td><td id="socicons" align="center" ><a href="https://www.youtube.com/user/scoutchorton" target="_blank"><img src="https://scoutchorton.github.io/yousocicon.png"></a><a href="https://github.com/scoutchorton" target="_blank"><img src="https://scoutchorton.github.io/gitsocicon.png"></a><a href="https://plus.google.com/103984685841390951470" target="_blank"><img src="https://scoutchorton.github.io/gooplussocicon.png"></a></td><td style="text-align: right;" width="33%">Designed and maintained by scoutchorton.</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

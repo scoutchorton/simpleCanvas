@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://scoutchorton.github.io/styles.css" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
+		<link rel="icon" href="../../images/iconLogo.png" type="image/png">
+
+		<title>simpleCanvas Demo</title>
+		<link href="../example_style.css" rel="stylesheet" type="text/css" />
+        <script src="https://scoutchorton.github.io/simpleCanvas/simpleCanvas.min.js"></script>
+
+		<script>
+		function fadingin(){
+			var element = document.getElementById("navt");
+			fade(element);
+		}
+		</script>
+	</head>
+	<body>
+		<!--<iframe id="menuFrame" src="https://scoutchorton.github.io/nav.html"></iframe>-->
+		  <center>
+			<div class="page">
+				<!--PAGE CODE START-->
+				<script>
+		function wosC(){
+			let canvas = document.getElementById('canvas');
+			let c = canvas.getContext('2d');
+
+			n=0;
+			setInterval(function(){
+				n++;
+				if(n >= 360){
+					n = 0;
+				}
+				canvas.height=400 + (50 * Math.sin(n * Math.PI / 180));
+				canvas.width=400 + (50 * Math.sin(n * Math.PI / 180));
+				c.beginPath();
+				c.fillStyle="#ffffffff";
+				c.moveTo(5, 5);
+				c.rect(5, 5, canvas.width - 10, canvas.height - 10);
+				c.moveTo((canvas.width / 2) + (canvas.width / 3), (canvas.height / 2));
+				c.ellipse(canvas.width / 2, canvas.height / 2, canvas.width / 3, canvas.height / 3, 0, 0, Math.PI*2);
+				c.fill();
+				c.stroke();
+			},100/3);
+		}
+		function wsC() {
+			let c = new simpleCanvas('canvas2');
+
+			n=0;
+			c.draw = function() {
+				n++;
+				if(n >= 360){
+					n = 0;
+				}
+				c.resize(400+(50*Math.sin(n*Math.PI/180)), 400+(50*Math.sin(n*Math.PI/180)));
+				c.rect(5,5,c.width-10, c.height-10);
+				c.ellipse(c.width/2, c.height/2, c.width/3, c.height/3);
+			};
+		}
+		window.onload = function() {
+			wosC();
+			wsC();
+		}
+	</script>
+		<img src="../../images/fullLogo.png" height="50px"/>
+		<a class="linkCode" href="../"><div class='code'>← Back to list</div></a>
+		<table width="100%">
+			<tr>
+				<td><h3>Without simpleCanvas</h3></td>
+				<td><h3>With simpleCanvas</h3></td>
+			</tr>
+			<tr>
+				<td><div id="cDiv" style="min-width: 454px; min-height: 454px;"><canvas id="canvas"></canvas></div></td>
+				<td><div id="cDiv" style="min-width: 454px; min-height: 454px;"><canvas id="canvas2"></canvas></div></td>
+			</tr>
+			<tr>
+				<td><div class="code">window.onload=function(){
+	let canvas = document.getElementById('canvas');
+	let c = canvas.getContext('2d');
+
+	n = 0;
+	setInterval(function() {
+		n++;
+		if(n >= 360){
+			n = 0;
+		}
+		canvas.height=400 + (50 * Math.sin(n * Math.PI / 180));
+		canvas.width=400 + (50 * Math.sin(n * Math.PI / 180));
+		c.beginPath();
+		c.fillStyle="#ffffffff";
+		c.moveTo(5, 5);
+		c.rect(5, 5, canvas.width - 10, canvas.height - 10);
+		c.moveTo((canvas.width / 2) + (canvas.width / 3), (canvas.height / 2));
+		c.ellipse(canvas.width / 2, canvas.height / 2, canvas.width / 3, canvas.height / 3, 0, 0, Math.PI*2);
+		c.fill();
+		c.stroke();
+	}, 1000/30);
+}</div></td>
+				<td><div class="code">window.onload=function(){
+	let c = new simpleCanvas('canvas');
+
+	n = 0;
+	c.draw = function() {
+		n++;
+		if(n >= 360){
+			n = 0;
+		}
+		c.resize(400 + (50 * Math.sin(n * Math.PI / 180)), 400 + (50 * Math.sin(n * Math.PI / 180)));
+		c.rect(5, 5, c.width - 10, c.height - 10);
+		c.ellipse(c.width / 2, c.height / 2, c.width / 3, c.height / 3);
+	};
+}</div></td>
+			</tr>
+		</table>
+				<!--PAGE CODE END-->
+			</div>
+		  </center>
+		<div id="footer">
+			<span style="text-align: left;">Powered by github. Go make an account for free at <a href="https://github.com/">github.com</a>. Realy, go do it.</span>
+			<br>
+			<table width="100%">
+				<tr>
+					<td style="text-align: left;" width="33%"></td><td id="socicons" align="center" ><a href="https://www.youtube.com/user/scoutchorton" target="_blank"><img src="https://scoutchorton.github.io/yousocicon.png"></a><a href="https://github.com/scoutchorton" target="_blank"><img src="https://scoutchorton.github.io/gitsocicon.png"></a><a href="https://plus.google.com/103984685841390951470" target="_blank"><img src="https://scoutchorton.github.io/gooplussocicon.png"></a></td><td style="text-align: right;" width="33%">Designed and maintained by scoutchorton.</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
