@@ -37,11 +37,10 @@ window.onload=function(){
 			t=1;
 		}
 		c.background(255-n, n, 0);
-		c.fill(0, n, 255-n, 1);
+		c.fill(0, n, 255-n);
+		c.noStroke();
 		c.triangle(5,5,c.width-5,5,5,c.height-5);
 		img=c.getImage('./images/shortLogo.png');
-		c.noFill();
-		c.rect(mouseX-(img.width/10),mouseY-(img.height/10),(img.width/5.5),(img.height/4));
 		c.image(img,mouseX-(img.width/10),mouseY-(img.height/10), 248, 124);
 	}
 

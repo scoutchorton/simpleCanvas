@@ -103,7 +103,11 @@ simpleCanvas.prototype.colorMode=function(mode){
 	//Either takes text string or variables from script (makes sure it's lowercase)
 	this.s.colorMode=mode.toLowerCase();
 }
-simpleCanvas.prototype.fill=function(i1=255, i2=255, i3=255,i4=255){
+simpleCanvas.prototype.fill=function(i1, i2, i3, i4){
+	i1=(i1===undefined)?255:i1;
+	i2=(i2===undefined)?255:i2;
+	i3=(i3===undefined)?255:i3;
+	i4=(i4===undefined)?255:i4;
 	if(this.s.colorMode==="rgb"){
 		this.s.fill="rgba("+i1+", "+i2+", "+i3+", "+i4+")";
 	}else if(this.s.colorMode==="hex"){
@@ -140,7 +144,11 @@ simpleCanvas.prototype.fill=function(i1=255, i2=255, i3=255,i4=255){
 	}
 	this.s.noFill=false;
 }
-simpleCanvas.prototype.stroke=function(i1=255, i2=255, i3=255,i4=255){
+simpleCanvas.prototype.stroke=function(i1, i2, i3, i4){
+	i1=(i1===undefined)?255:i1;
+	i2=(i2===undefined)?255:i2;
+	i3=(i3===undefined)?255:i3;
+	i4=(i4===undefined)?255:i4;
 	if(this.s.colorMode==="rgb"){
 		this.s.stroke="rgba("+i1+", "+i2+", "+i3+", "+i4+")";
 	}else if(this.s.colorMode==="hex"){
@@ -177,7 +185,11 @@ simpleCanvas.prototype.stroke=function(i1=255, i2=255, i3=255,i4=255){
 	}
 	this.s.noStroke=false;
 }
-simpleCanvas.prototype.background=function(i1=255, i2=255, i3=255,i4=255){
+simpleCanvas.prototype.background=function(i1, i2, i3, i4){
+	i1=(i1===undefined)?255:i1;
+	i2=(i2===undefined)?255:i2;
+	i3=(i3===undefined)?255:i3;
+	i4=(i4===undefined)?255:i4;
 	this.c.clearRect(0,0,this.width,this.height);
 	if(this.s.colorMode==="rgb"){
 		this.c.fillStyle="rgba("+i1+", "+i2+", "+i3+")";
