@@ -61,7 +61,7 @@ function simpleCanvas(element){
 	this.width=this.ele.width;
 	this.height=this.ele.height;
 	this.c=this.ele.getContext('2d');
-	let t=this;
+	var dis=this;
 
 	//Functions
 	this.resize(400,400);
@@ -75,7 +75,7 @@ function simpleCanvas(element){
 	//mouseX and mouseY coordinate update
 	//Derived from https://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/
 	this.ele.addEventListener('mousemove',function(e){
-		var r=t.ele.getBoundingClientRect();
+		var r=dis.ele.getBoundingClientRect();
 		mouseX=e.clientX-r.left;
 		mouseY=e.clientY-r.top;
 	});
