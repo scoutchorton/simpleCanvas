@@ -40,9 +40,6 @@ a .code{
 	border:1px black solid;
 	display:block;
 }
-canvas{
-	border: 1px black solid;
-}
 table{
 	table-layout: fixed;
 }

@@ -59,7 +59,7 @@
 			n=0;n = 0;
 			c.c.lineWidth = 2;
 			c.draw = function() {
-				c.background(255, 255, 255);
+				c.background();
 				n--;
 				range(c.width).forEach(function(e){
 					c.point(e, 200+(100*Math.sin((e+n)*Math.PI/180)));
@@ -72,7 +72,7 @@
 			wsC();
 		}
 	</script>
-		<img src="../../images/fullLogo.png" height="50px"/>
+		<a href="https://scoutchorton.github.io/simpleCanvas"><img src="../../images/fullLogo.png" height="50px"/></a>
 		<a class="linkCode" href="../"><div class='code'>← Back to list</div></a>
 		<table width="100%">
 			<tr>
@@ -121,7 +121,7 @@
 	n = 0;
 	c.c.lineWidth = 2;
 	c.draw = function() {
-		c.background(255, 255, 255);
+		c.background();
 		n--;
 		range(c.width).forEach(function(e) {
 			c.point(e, 200 + (100 * Math.sin((e + n) * Math.PI / 180)));
