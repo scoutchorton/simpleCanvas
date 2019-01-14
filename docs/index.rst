@@ -1,4 +1,4 @@
-.. image:: ../images/fullLogo.png
+.. image:: ./fullLogo.png
 	:alt: simpleCanvas logo
 
 Welcome
