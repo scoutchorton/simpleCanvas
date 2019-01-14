@@ -1,4 +1,4 @@
-.. image:: ./images/fullLogo.png
+.. image:: ../images/fullLogo.png
 	:alt: simpleCanvas logo
 
 Changelog
