@@ -1,4 +1,4 @@
-![simpleCanvas logo](./docs/images/fullLogo.png)
+![simpleCanvas logo](./images/fullLogo.png)
 
 # Welcome
 
