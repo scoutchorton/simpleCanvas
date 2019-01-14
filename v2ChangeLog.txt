@@ -1,0 +1,33 @@
+Documented
+	Todo
+		keyIsPressed, key, keyCode, keys, keyFocus, mouseFocus, mouseButton, negativeMouse (variables)
+		keyDown, keyPressed, keyUp, mouseClicked, mousePressed (has a quirk where the first click doesn't register, due to assigning targetElement variable), mouseReleased, mouseMoved, mouseDragged, mouseOver, mouseOut (functions)
+
+	Changes
+
+	Done
+		Added color function
+
+Changelog
+	Additons
+	Added color function
+	Keyboard event features
+		keyIsPressed, key, keyCode, keys, keyFocus (variables)
+		keyDown, keyPressed, keyUp (functions)
+	Add mouse event features
+		mouseFocus, mouseButton, negativeMouse (variables)
+		mouseClicked, mousePressed (has a quirk where the first click doesn't register, due to assigning targetElement variable), mouseReleased, mouseMoved, mouseDragged, mouseOver, mouseOut (functions)
+
+	Fixes
+	Fixed issue with black background even when using background(); (confirmed working on iOS 12.1.2 (Safari 12.0, Google Chrome 71.0.3578.89))
+
+	Changes
+	Switched to string interpolation for color function
+	HEX and HSL now use ternary conditions to check if values are default
+	Moved documentation to /docs folder, and kept webpage stuff in root folder
+	mouseX and mouseY can be negative if negativeMouse is true
+	Changed global variables to be within function (HEX, RGB, mouseX, etc.)
+
+Todos
+Test background issue with Switch
+Update all documentation

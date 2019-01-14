@@ -27,6 +27,14 @@ window.onload=function(){
 
 	n=0;
 	t=1;
+	var img=c.getImage('./images/shortLogo.png');
+	//c.negativeMouse=true;
+
+	var pos=[(c.width/2)-(img.width/10),(c.height/2)-(img.height/10)];
+	c.mouseDragged=function(){
+		pos=[c.mouseX-(img.width/10),c.mouseY-(img.height/10)];
+	};
+	
 	c.draw=function(){
 		//c.background("FF", "7f", "00");
 		//c.fill("00", "7f", "ff");
@@ -40,10 +48,9 @@ window.onload=function(){
 		c.fill(0, n, 255-n);
 		c.noStroke();
 		c.triangle(5,5,c.width-5,5,5,c.height-5);
-		img=c.getImage('./images/shortLogo.png');
-		c.image(img,mouseX-(img.width/10),mouseY-(img.height/10), 248, 124);
-	}
-
+		c.image(img,pos[0],pos[1],248,124);
+		//console.log(c.mouseFocus, c.keyFocus);
+	};
 
 	//c.rect(5,5,c.width-10,c.height-10);
 	//c.ellipse(c.width/2,c.height/2,c.width/3,c.height/3);

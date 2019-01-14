@@ -30,6 +30,7 @@ Please visit the `GitHub page <https://github.com/scoutchorton/simpleCanvas>`_ f
 
   Welcome <self>
   gettingStarted
+  changelog
   canvasInteraction
   color
   image
