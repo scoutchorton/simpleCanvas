@@ -53,7 +53,7 @@ function simpleCanvas(element){
 	this.width=this.ele.width;
 	this.height=this.ele.height;
 	this.c=this.ele.getContext('2d');
-	this.keyIsPressed=this.mouseIsPressed=this.keyFocus=this.mouseFocus=this.negativeMouse=false;
+	this.keyIsPressed=this.mouseIsPressed=this.keyFocus=this.mouseFocus=this.negativeMouse=this.keyLower=false;
 	this.key=this.mouseButton=undefined;
 	this.keys={};
 	var thisVar=this;
@@ -81,28 +81,32 @@ function simpleCanvas(element){
 	});
 
 	document.addEventListener('keydown', function(e){
-		if((typeof(thisVar.keyDown)=='function')&&(thisVar.targetEle===thisVar.ele)&&(!event.repeat)){
+		if(thisVar.targetEle===thisVar.ele){
 			thisVar.keyIsPressed=true;
 			thisVar.key=e.key;
 			thisVar.keyCode=e.which;
-			keys[e.which]=(e.type=='keydown');
+			thisVar.keys[(thisVar.keyLower)?e.key.toLowerCase():e.key]=(e.type=='keydown');
+		}
+
+		if((typeof(thisVar.keyDown)=='function')&&(thisVar.targetEle===thisVar.ele)&&(!event.repeat)){
 			e.preventDefault();
 			thisVar.keyDown();
 		}
 		
 		if((typeof(thisVar.keyPressed)=='function')&&(thisVar.targetEle===thisVar.ele)&&(event.repeat)){
-			thisVar.keyIsPressed=true;
-			keys[e.which]=(e.type=='keydown');
 			e.preventDefault();
 			thisVar.keyPressed();
 		}
 	});
 	document.addEventListener('keyup', function(e){
+		if(thisVar.targetEle===thisVar.ele){
+			thisVar.keyIsPressed=true;
+			thisVar.key=e.key;
+			thisVar.keyCode=e.which;
+			thisVar.keys[(thisVar.keyLower)?e.key.toLowerCase():e.key]=(e.type=='keydown');
+		}
+
 		if((typeof(thisVar.keyUp)=='function')&&(thisVar.targetEle===thisVar.ele)){
-			thisVar.keyIsPressed=false;
-			thisVar.key=undefined;
-			thisVar.keyCode=undefined;
-			keys[e.which]=(e.type=='keydown');
 			e.preventDefault();
 			thisVar.keyUp();
 		}
@@ -168,11 +172,9 @@ function simpleCanvas(element){
 			thisVar.mouseX=(x<0)?0:x;
 			thisVar.mouseY=e.clientY-r.top;
 		}
-		console.log(thisVar.mouseX, thisVar.mouseY);
 
 		if((typeof(thisVar.mouseMoved)=='function')&&(thisVar.targetEle==thisVar.ele)){
 			thisVar.mouseMoved();
-			console.log(thisVar.mouseIsPressed);
 		}
 		if((typeof(thisVar.mouseDragged)=='function')&&(thisVar.targetEle==thisVar.ele)&&(thisVar.mouseIsPressed)){
 			thisVar.mouseDragged();
@@ -276,10 +278,12 @@ simpleCanvas.prototype.color=function(i1, i2, i3){
 	if(this.s.colorMode==="rgb"){
 		return(`rgb(${i1}, ${i2}, ${i3})`);
 	}else if(this.s.colorMode==="hex"){
-		i1=(i1==255)?"ff":i1;
-		i2=(i2==255)?"ff":i2;
-		i3=(i3==255)?"ff":i3;
+		i1=(i1===255)?"ff":i1;
+		i2=(i2===255)?"ff":i2;
+		i3=(i3===255)?"ff":i3;
 		if((i2==="ff")&&(i3==="ff")){
+			console.log(toString(i1).substring(0,1)==='#');
+			console.log(i1);
 			if(toString(i1).substring(0,1)==="#"){
 				return(i1);
 			}else{
