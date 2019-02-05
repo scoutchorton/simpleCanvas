@@ -282,8 +282,6 @@ simpleCanvas.prototype.color=function(i1, i2, i3){
 		i2=(i2===255)?"ff":i2;
 		i3=(i3===255)?"ff":i3;
 		if((i2==="ff")&&(i3==="ff")){
-			console.log(toString(i1).substring(0,1)==='#');
-			console.log(i1);
 			if(toString(i1).substring(0,1)==="#"){
 				return(i1);
 			}else{
